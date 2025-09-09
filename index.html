@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Mahasiswa USU</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h2 { text-align: center; font-style: italic; }
+    .section {
+      background: rgb(158, 144, 238);
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+    label { display: block; margin: 5px 0; }
+    input, select, textarea {
+      margin-top: 3px;
+      padding: 5px;
+      width: 250px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      width: auto;
+    }
+    .submit-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 8px 20px;
+      background: rgb(2, 0, 100);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background: rgb(119, 128, 0);
+    }
+  </style>
+</head>
+<body>
+  <h2>Form Data Mahasiswa USU</h2>
+  
+  <form action="#" method="post">
+    <!-- Bagian Informasi Umum -->
+    <div class="section">
+      <h3>Informasi Umum</h3>
+      <label>Nama Lengkap(*): <input type="text" name="nama"></label>
+      <label>Email(*): <input type="text" name="email"></label>
+      <label>NIM(*): <input type="text" name="nim"></label>
+      <label>Password(*): <input type="password" name="password"></label>
+    </div>
+
+    <!-- Bagian Data Mahasiswa -->
+    <div class="section">
+      <h3>Data Mahasiswa</h3>
+      <label>No. HP(*): <input type="text" name="phone"></label>
+      <label>Tanggal Lahir: <input type="date" name="birthdate"></label>
+      
+      <label>Jenis Kelamin:
+        <input type="radio" name="gender" value="perempuan"> Perempuan
+        <input type="radio" name="gender" value="laki"> Laki-laki
+      </label>
+      
+      <label>Fakultas:
+        <select name="fakultas">
+          <option value="">-- Pilih Fakultas --</option>
+          <option value="fk">Fakultas Kedokteran</option>
+          <option value="fh">Fakultas Hukum</option>
+          <option value="fp">Fakultas Pertanian</option>
+          <option value="ft">Fakultas Teknik</option>
+          <option value="feb">Fakultas Ekonomi dan Bisnis</option>
+          <option value="fkg">Fakultas Kedokteran Gigi</option>
+          <option value="fib">Fakultas Ilmu Budaya</option>
+          <option value="fmipa">Fakultas Matematika dan Ilmu Pengetahuan Alam</option>
+          <option value="fisip">Fakultas Ilmu Sosial dan Ilmu Politik</option>
+          <option value="fkm">Fakultas Kesehatan Masyarakat</option>
+          <option value="fkep">Fakultas Keperawatan</option>
+          <option value="FPsi">Fakultas Psikologi</option>
+          <option value="FFarm">Fakultas Farmasi</option>
+          <option value="fasilkom">Fakultas Ilmu Komputer dan Teknologi Informasi</option>
+          <option value="FHut">Fakultas Kehutanan</option>
+          <option value="Fasi">Fakultas Vokasi</option>
+
+        </select>
+      </label>
+
+      <!-- Organisasi Kampus -->
+      <p>Organisasi Kampus:</p>
+      <label><input type="checkbox" name="org" value="bem"> BEM</label>
+      <label><input type="checkbox" name="org" value="himpunan"> Himpunan</label>
+      <label><input type="checkbox" name="org" value="ukm"> UKM</label>
+      <label><input type="checkbox" name="org" value="aiesec"> AIESEC</label>
+      <label><input type="checkbox" name="org" value="suarausu"> SUARA USU</label>
+
+      <!-- Minat & Bakat -->
+      <p>Minat dan Bakat:</p>
+      <label><input type="checkbox" name="minat" value="olahraga"> Olahraga</label>
+      <label><input type="checkbox" name="minat" value="seni"> Seni</label>
+      <label><input type="checkbox" name="minat" value="it"> IT</label>
+
+      <label>Alamat: <textarea name="address"></textarea></label>
+    </div>
+
+    <input type="submit" value="daftar" class="submit-btn">
+    <input type="submit" value="reset" class="submit-btn">
+  </form>
+</body>
+</html>
